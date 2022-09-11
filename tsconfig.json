@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outFile": "dist/jquartz.js",
+    "target": "es6",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "newLine": "lf",
+    "strict": true,
+    "noImplicitThis": false,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true
+  },
+  "exclude": [
+    "tests"
+  ],
+  "include": [
+    "src/*.ts",
+    "src/**/index.ts"
+  ]
+}

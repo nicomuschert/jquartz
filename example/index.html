@@ -1,0 +1,49 @@
+<html>
+  <!--
+    @> npm install -g serve
+    @> serve .
+    Open your browser and enter the URL: http://localhost:3000/example/index.html
+  -->
+  <link rel="stylesheet" href="/dist/jquartz.css" />
+  <script src="/example/jquery.min.js"></script>
+  <script src="/dist/jquartz.js"></script>
+  <body>
+      Quartz input field:
+      <input id="quartz-input" type="text" size="50" value="0 10 12 ? * TUE,THU,SUN * 2078" readonly>
+    <hr>
+  </body>
+  <script>
+    // Please find some examples here you could put into "value":
+
+    // yearly
+    // 26 7 8 19 4 ? *
+    // 20 10 8 ? 5 THU#2 *
+
+    // monthly
+    // 0 30 16 16 1/8 ? *
+    // 0 30 16 ? 1/5 SAT#3 *
+
+    // weekly
+    // 0 10 12 ? * TUE,THU,SUN *
+
+    // daily
+    // 0 7 10 1/15 * ? *
+    // 0 10 2 ? * MON-FRI *
+
+    // hourly
+    // 0 0 0/5 * * ? *
+    // 0 8 0 * * ? *     // this will be handled as "daily" but you can produce it also in hourly
+
+    // minutes
+    // 0 * * * * ? *
+    // 0 0/15 * * * ? *
+
+    // seconds
+    // * * * * * ? *
+    // 0/16 * * * * ? *
+
+    var quartzInput = $('#quartz-input').jQuartz().on('change', function () {
+      console.log('Quartz string: ', quartzInput.val())
+    })
+  </script>
+</html>
