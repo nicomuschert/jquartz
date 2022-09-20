@@ -1,8 +1,0 @@
-{
-  "mangle": true,
-  "compress": true,
-  "output": {
-    "beautify": false,
-    "preamble": "//# sourceMappingURL=./jquartz.js.map"
-  }
-}
