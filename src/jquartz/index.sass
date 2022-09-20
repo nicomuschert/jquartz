@@ -1,0 +1,33 @@
+.jquartz-form
+	display: inline-block
+	min-width: 25rem
+	.d-none
+		display: none
+	.jqartz-tabs
+		display: flex
+		justify-content: space-evenly
+		margin: 0.5rem 0.5rem 0 0.5rem
+		& + .jqartz-period
+			margin: 0
+		& > label
+			position: relative
+			overflow: hidden
+			top: .125rem
+			div
+				padding: .125rem .125rem
+				border-bottom: .189rem solid transparent
+			input
+				position: absolute
+				top: -10rem
+				&:checked
+					& + div
+						border-bottom-color: grey
+	.jqartz-period
+		margin: 0.5rem 0 0 0
+		border: 0.063rem solid lightgrey
+		display: flex
+		align-items: center
+		justify-content: center
+		min-height: 5rem
+		input
+			margin-left: 0

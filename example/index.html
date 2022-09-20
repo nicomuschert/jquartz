@@ -1,16 +1,43 @@
 <html>
   <!--
-    @> npm install -g serve
-    @> serve .
-    Open your browser and enter the URL: http://localhost:3000/example/index.html
+    This file is served by:
+    @> npm run watch
   -->
-  <link rel="stylesheet" href="/dist/jquartz.css" />
-  <script src="/example/jquery.min.js"></script>
-  <script src="/dist/jquartz.js"></script>
+  <link rel="stylesheet" href="./jquartz.css" />
+  <script src="./jquery.min.js"></script>
+  <script src="./jquartz.js"></script>
   <body>
-      Quartz input field:
-      <input id="quartz-input" type="text" size="50" value="0 10 12 ? * TUE,THU,SUN * 2078" readonly>
-    <hr>
+
+    <div style="display: flex; grid-gap: 1rem;">
+      <div>
+        <input
+          value="0 10 12 ? * TUE,THU,SUN * 2078"
+          class="jquartz-input"
+          data-jquartz-ui="ui-1"
+          style="width: 100%" />
+        <div id="ui-1"></div>
+      </div>
+
+      <div>
+        <input
+          value="0 30 16 ? 1/5 SAT#3 *"
+          class="jquartz-input"
+          data-jquartz-ui="ui-2"
+          style="width: 100%" />
+        <div id="ui-2"></div>
+      </div>
+
+      <div>
+        <input
+          value="When are you going to buy cookies?"
+          class="jquartz-input"
+          data-jquartz-ui="ui-3"
+          data-jquartz-periods="daily,weekly,monthly"
+          style="width: 100%" />
+        <div id="ui-3"></div>
+      </div>
+    </div>
+
   </body>
   <script>
     // Please find some examples here you could put into "value":
@@ -42,8 +69,9 @@
     // * * * * * ? *
     // 0/16 * * * * ? *
 
-    var quartzInput = $('#quartz-input').jQuartz().on('change', function () {
-      console.log('Quartz string: ', quartzInput.val())
-    })
+
+    $('.jquartz-input').jQuartz().on('change', function () {
+      console.log('Quartz string: ', $(this).val())
+    });
   </script>
 </html>
