@@ -1,4 +1,4 @@
-export const _jsxLayout = (model: { [k: string]: any }, cb: (m: { [k: string]: () => JSX.Element }) => any) =>
+export const _jsxLayout = (model: { [k: string]: any }, cb: (_: { [k: string]: () => JSX.Element }) => any) =>
   cb(model as any) as unknown as JQuery
 
 export const _jsx = (el: string | JQuery | (() => JQuery), attrs: JQuery.PlainObject<any>, ...content: any) => {

@@ -10,8 +10,8 @@ type QuartzForm = {
   form: JQuery
   model: { [_: string]: JQuery }
   toString: () => string
-  setQuartz: (quartz: Quartz) => void
-  acceptQuartz: (quartz: Quartz) => boolean
+  setQuartz: (_: Quartz) => void
+  acceptQuartz: (_: Quartz) => boolean
 }
 
 type Quartz = {
@@ -26,12 +26,12 @@ type Quartz = {
 }
 
 interface JQuery {
-    jQuartz(o: JQuartzOptions): JQuery;
+    jQuartz(_: JQuartzOptions): JQuery;
 }
 
 declare namespace JSX {
   type Element = any
   interface IntrinsicElements {
-    [key: string]: any
+    [_: string]: any
   }
 }
