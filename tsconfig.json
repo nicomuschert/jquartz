@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
     "rootDir": "src",
-    "outFile": "dist/jquartz.js",
-    "target": "es6",
+    "target": "es2018",
     "lib": [
-      "es2018",
       "dom"
     ],
     "newLine": "lf",
+    "jsx": "react",
+    "jsxFactory": "_jsx",
+    "jsxFragmentFactory": "_jsxf",
     "strict": true,
     "noImplicitThis": false,
     "noImplicitAny": true,
     "moduleResolution": "node",
-    "sourceMap": true
+    "sourceRoot": "src",
+    "sourceMap": true,
+    "declaration": false
   },
   "exclude": [
     "tests"
   ],
   "include": [
-    "src/*.ts",
-    "src/**/index.ts"
+    "src/types.d.ts",
+    "src/**/*.ts"
   ]
 }
